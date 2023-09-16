@@ -1,0 +1,24 @@
+<mat-card class=" home mat-elevation-z3 ">
+    <mat-card-title class="title"> Nova Tarefa</mat-card-title>
+    <form>
+        <mat-form-field class="tarefa" >
+            <input matInput placeholder="Tarefa" [(ngModel)]="task.name" name="name" autocomplete="none">
+        </mat-form-field>
+        <mat-form-field class="calendario" autocomplete="none">
+            <input  matInput [matDatepicker]="picker" placeholder="Escolha uma data" [(ngModel)]="task.date" name="date">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field class="entrada_de_texto">
+            <textarea  matInput placeholder="Descrição" [(ngModel)]="task.description" name="description" rows="1">
+            </textarea>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="createTask()">
+        Salvar
+    </button>
+
+    <button class="button_cancel" mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>

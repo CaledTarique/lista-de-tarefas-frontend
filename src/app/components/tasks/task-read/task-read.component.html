@@ -1,0 +1,28 @@
+<div class="tarefas" *ngFor="let task of tasks">
+    <mat-card class="mat-elevation-z3 card"  *ngIf="!task.complete">
+        <mat-card-title class="title ">
+            <input type="checkbox" id="checkbox" (click)="taskCompleta(task)" >
+            <span class="tarefa">
+                {{task.name}}
+            </span>
+            <a mat-list-item routerLink="/tasks/update/{{task.id}}">
+                <i class="material-icons v-middle icone-edit ">
+                    edit
+                </i>
+            </a>
+            <a mat-list-item routerLink="/tasks/delete/{{task.id}}">
+                <i class="material-icons v-middle icone-delete">
+                    delete
+                </i>
+            </a>
+        </mat-card-title>
+        <mat-card-subtitle class="subtitle">
+            {{task.date | date :'d MMM':'': 'pt-BR'}}
+        </mat-card-subtitle>
+        <mat-card-content class="content">
+            <p>
+                {{task.description}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

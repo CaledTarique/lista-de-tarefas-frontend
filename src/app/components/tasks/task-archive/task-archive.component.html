@@ -1,0 +1,13 @@
+<h1 class="cabecalho">Concluídas</h1>
+<div class="tarefas" *ngFor="let task of tasks">
+    <mat-card class="mat-elevation-z3 card" *ngIf="task.complete">
+        <mat-card-title class="title ">
+            <span class="tarefa">
+                {{task.name}}
+            </span>
+        </mat-card-title>
+        <mat-card-subtitle class="subtitle">
+            {{task.date | date :'d MMM':'': 'pt-BR'}}
+        </mat-card-subtitle>
+    </mat-card>
+</div>

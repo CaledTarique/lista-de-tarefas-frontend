@@ -1,0 +1,25 @@
+.tarefa{
+    width: 20%;
+}
+form{
+    display: block;
+}
+button{
+    padding: 0rem 1rem ;
+    margin-right: 15px;
+    margin-top: 20px;
+    background-color: #3F51B5;
+    color: white;
+}
+.button_cancel{
+    background-color: white;
+    color: black;
+}
+
+button:hover{
+    background-color:#646ea5
+}
+
+.button_cancel:hover{
+    background-color: rgba(226, 224, 228, 0.815);
+}
