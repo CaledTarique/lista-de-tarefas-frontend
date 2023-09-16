@@ -9,7 +9,7 @@ import { Task } from './task.model';
 })
 export class TasksService {
   
-    baseUrl = "http://localhost:3001/tasks"
+    baseUrl = "https://lista-de-tarefas-backend.vercel.app/tasks"
  
 
   constructor(private snackBar: MatSnackBar, private http: HttpClient) { }
